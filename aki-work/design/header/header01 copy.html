@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+  <head>
+    <title>header - Shop Header (aki-select)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <!-- Link Swiper's CSS（Free Mode デモ準拠・v14）※RMSへ反映時は外部CDN読込の可否を要確認 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
+    <style type="text/css">
+      @charset "UTF-8";
+
+      :root {
+        --green: #0fb400;
+        --orange: #e8561e;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Hiragino Kaku Gothic ProN", "メイリオ", "Noto Sans JP", sans-serif;
+        color: #444;
+        background: #fff;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .topbar {
+        width: 100%;
+        background: #fff;
+      }
+      .topbar__inner {
+        max-width: 1770px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      /* 1. ヘッダー（cocacoca スライド上部のスタイルを踏襲） */
+      .topbar__header {
+        width: 100%;
+        background: #fff;
+      }
+      .header-inner {
+        width: 1100px;
+        margin: 0 auto;
+      }
+
+      /* ① ロゴ＋小ナビ */
+      .util-head {
+        position: relative;
+        height: 108px;
+      }
+      .util-logo {
+        position: absolute;
+        left: 0;
+        bottom: 12px;
+      }
+      .util-logo img {
+        display: block;
+        height: 90px;
+        width: auto;
+      }
+      .util-subnav {
+        position: absolute;
+        right: 0;
+        bottom: 16px;
+      }
+      .util-subnav li {
+        float: left;
+        text-align: center;
+        padding: 0 14px;
+        border-right: 1px solid #333;
+      }
+      .util-subnav li:first-child { padding-left: 0; }
+      .util-subnav li:last-child { border-right: none; }
+      .util-subnav a {
+        display: block;
+        padding-top: 30px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        line-height: 1.2;
+        color: #333;
+      }
+      .util-subnav .nav_1 a { background-image: url("https://www.rakuten.ne.jp/gold/aki-select/images/nav/chat.jpg"); }
+      .util-subnav .nav_2 a { background-image: url("https://www.rakuten.ne.jp/gold/aki-select/images/nav/guide.jpg"); }
+      .util-subnav .nav_3 a { background-image: url("https://www.rakuten.ne.jp/gold/aki-select/images/nav/help.jpg"); }
+      .util-subnav .nav_4 a { background-image: url("https://www.rakuten.ne.jp/gold/aki-select/images/nav/mail.jpg"); }
+      .util-subnav .nav_5 a { background-image: url("https://www.rakuten.ne.jp/gold/aki-select/images/nav/rakuten.jpg"); }
+      .util-subnav a:hover { opacity: 0.3; }
+
+      /* ② グローバルメニュー */
+      .global-menu {
+        position: relative;
+        background: #fff;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+      .global-menu > ul {
+        width: 1100px;
+        margin: 0 auto;
+      }
+      .global-menu > ul:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .global-menu > ul > li {
+        float: left;
+        width: 183px;
+        height: 60px;
+        text-align: center;
+        transition: background-color .3s ease;
+      }
+      .global-menu > ul > li > a {
+        display: block;
+        height: 100%;
+        color: #333;
+      }
+      .global-menu > ul > li > a > span {
+        display: block;
+        line-height: 60px;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+      }
+      .global-menu > ul > li:hover { background: #ccc; }
+      .global-menu .ja { display: none; }
+      .global-menu > ul > li:hover .en { display: none; }
+      .global-menu > ul > li:hover .ja { display: block; }
+
+      /* CART */
+      .global-menu > ul > li.cart { background: #A70202; }
+      .global-menu > ul > li.cart > a { color: #fff; }
+      .global-menu > ul > li.cart > a > span { color: #fff; }
+      .global-menu > ul > li.cart:hover { background: #F39797; }
+
+      /* ③ カテゴリドロップダウン（CSSのみ・ホバーで展開） */
+      .category-wrap {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background: #f5f5f5;
+        opacity: 0.98;
+        box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        padding: 12px 0;
+      }
+      .global-menu > ul > li.has-cat:hover .category-wrap { display: block; }
+      .category-menu {
+        width: 1100px;
+        margin: 0 auto;
+      }
+      .category-menu:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .category-menu .col {
+        float: left;
+        width: 172px;
+        margin: 0 5px;
+      }
+      .category-menu .col ul li {
+        float: none;
+        width: auto;
+        height: auto;
+        text-align: left;
+      }
+      .category-menu .col ul li:first-child {
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+      }
+      .category-menu .col ul li a {
+        display: block;
+        padding-left: 6px;
+        line-height: 25px;
+        height: 25px;
+        color: #555;
+        font-size: 11px;
+      }
+      .category-menu .col ul li:first-child a {
+        font-size: 13px;
+        color: #333;
+      }
+      .category-menu .col ul li a:hover {
+        color: #000;
+        background: #e5e5e5;
+      }
+      .category-menu .col ul + ul { margin-top: 8px; }
+
+      /* ④ 検索＋注目キーワード */
+      .search-wrap {
+        background: #fafafa;
+        padding: 6px 0;
+      }
+      .search-block {
+        width: 1100px;
+        margin: 0 auto;
+      }
+      .search-block form {
+        float: left;
+      }
+      .search1 {
+        position: relative;
+        width: 230px;
+        height: 22px;
+        margin: 2px 0;
+        background: #fff;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+      }
+      .search1 dt {
+        margin-right: 44px;
+        padding: 0 0 0 8px;
+      }
+      .search1 dt input {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        border: none;
+        background: none;
+        font-size: 12px;
+      }
+      .search1 dd {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .search1 dd button {
+        display: block;
+        height: 22px;
+        padding: 0 10px;
+        background: #d5d5d5;
+        border: none;
+        border-radius: 0 3px 3px 0;
+        font-size: 11px;
+        color: #333;
+        cursor: pointer;
+      }
+      .search1 dd button:hover {
+        background: #c5c5c5;
+      }
+      .link-tag {
+        margin-left: 250px;
+        text-align: left;
+      }
+      .link-tag:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .link-tag p {
+        float: left;
+        line-height: 26px;
+        font-size: 10px;
+        margin-right: 8px;
+      }
+      .link-tag p.title {
+        font-weight: bold;
+      }
+      .link-tag a { color: #000; }
+      .link-tag a:hover { color: #b00; }
+
+      /* 2. 商品スライド帯（Swiper Free Mode デモ準拠・各カテゴリーの代表商品1件） */
+      .topbar__items {
+        position: relative;
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+        padding: 14px 0;
+        overflow: hidden;
+      }
+      .topbar__items .swiper {
+        width: 100%;
+        padding: 10px 0;
+      }
+      .topbar__items .swiper-slide {
+        text-align: center;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .topbar__items .card {
+        display: block;
+        width: 300px;
+      }
+      .topbar__items .card .pic {
+        display: block;
+        width: 298px;
+        height: 298px;
+        border: 1px solid #e8dfd5;
+        object-fit: cover;
+        background: #f7f5f1;
+      }
+      .topbar__items .card:hover .pic {
+        opacity: .8;
+      }
+      .topbar__items .card .cat {
+        display: block;
+        margin-top: 8px;
+        font-size: 12px;
+        color: #999;
+        line-height: 1.2;
+      }
+      .topbar__items .card .name {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-top: 2px;
+        font-size: 12px;
+        color: #555;
+        line-height: 1.4;
+        height: 50px;
+      }
+      .topbar__items .card .price {
+        display: block;
+        margin-top: 4px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #bf0000;
+      }
+
+      /* ページネーション（デモ準拠・クリッカブル） */
+      .topbar__items .swiper-pagination-bullet {
+        background: #999;
+        opacity: 1;
+      }
+      .topbar__items .swiper-pagination-bullet-active {
+        background: var(--orange);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header class="topbar">
+      <div class="topbar__header">
+
+        <!-- ① ロゴ＋小ナビ -->
+        <div class="header-inner util-head">
+          <a class="util-logo" href="https://www.rakuten.co.jp/aki-select/" target="_top">
+            <img src="https://image.rakuten.co.jp/aki-select/cabinet/page01/logo/imgrc0120555780.jpg" alt="aki-select">
+          </a>
+          <ul class="util-subnav">
+            <!-- <li class="nav_4"></li> -->
+            <li class="nav_2"></li>
+            <li class="nav_1"><a href="https://review.rakuten.co.jp/shop/4/445073_445073/1.1/" target="_blank">レビュー</a></li>
+            <li class="nav_2"><a href="https://www.rakuten.co.jp/aki-select/info2.html" target="_top">決済・配送・返品</a></li>
+            <li class="nav_3"><a href="https://www.rakuten.co.jp/aki-select/info.html" target="_top">会社概要</a></li>
+            <li class="nav_4"><a href="https://www.rakuten.co.jp/aki-select/news.html" target="_top">メルマガ</a></li>
+            <li class="nav_5"><a href="https://www.rakuten.co.jp/" target="_blank">楽天TOP</a></li>
+          </ul>
+        </div>
+
+        <!-- ② グローバルメニュー -->
+        <nav class="global-menu">
+          <ul>
+            <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000002/" target="_top"><span class="en">NEW</span><span class="ja">新入荷</span></a></li>
+            <!-- <li><a href="https://www.rakuten.co.jp/aki-select/" target="_top"><span class="en">RE</span><span class="ja">再入荷</span></a></li> -->
+            <li><a href="https://www.rakuten.co.jp/gold/aki-select/item_list/rank.html" target="_top"><span class="en">RANKING</span><span class="ja">ランキング</span></a></li>
+            <li><a href="https://search.rakuten.co.jp/search/mall/?f=2&sid=445073" target="_top"><span class="en">送料無料</span><span class="ja">送料無料</span></a></li>
+            <li class="has-cat">
+              <a href="https://item.rakuten.co.jp/aki-select/c/" target="_top"><span class="en">CATEGORY</span><span class="ja">カテゴリ一覧</span></a>
+              <div class="category-wrap">
+                <div class="category-menu">
+                  <div class="col"><ul>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000005/">トップス 一覧 &gt;</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000028/">ニット・セーター</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000029/">Tシャツ・カットソー</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000030/">チュニック</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000031/">シャツ・ブラウス</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000032/">トレーナー</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000033/">セットアップ</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000034/">カーディガン</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000035/">パーカー</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000036/">ベスト・ジレ</a></li>
+                  </ul></div>
+                  <div class="col">
+                    <ul>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000006/">ワンピース 一覧 &gt;</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000044/">ショート・チュニック</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000045/">ミディアム</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000046/">ロング</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000043/">オールインワン・サロペット</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000007/">ボトムス 一覧 &gt;</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000047/">パンツ</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000048/">スカート</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <ul>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000008/">アウター 一覧 &gt;</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000049/">コート</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000050/">ジャケット</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000051/">ブルゾン</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000009/">インナー 一覧 &gt;</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000052/">タンクトップ・キャミソール</a></li>
+                      <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000053/">ブラ・ショーツ</a></li>
+                    </ul>
+                  </div>
+                  <div class="col"><ul>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000010/">グッズ 一覧 &gt;</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000057/">バッグ</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000056/">シューズ</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000059/">帽子</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000058/">アクセサリー</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000060/">マフラー・手袋・ベルト</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000054/">レギンス・タイツ</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000055/">靴下</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000061/">レイングッズ</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000062/">スイムウェア</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000063/">ルームウェア</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000065/">美容</a></li>
+                  </ul></div>
+                  <div class="col"><ul>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000011/">オフィスカジュアル 一覧 &gt;</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000066/">シャツ・ブラウス</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000067/">ニット・セーター</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000068/">ワンピース</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000069/">アウター</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000070/">ボトムス</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000071/">バッグ</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000072/">シューズ</a></li>
+                  </ul></div>
+                  <div class="col"><ul>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000002/">2026新作アイテム</a></li>
+                    <!-- <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000019/">SALE</a></li> -->
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000015/">セット売り</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000012/">裏起毛アイテム</a></li>
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000013/">UVケアアイテム</a></li>
+                    <!-- <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000014/">リゾートアイテム</a></li> -->
+                    <li><a href="https://item.rakuten.co.jp/aki-select/c/0000000001/">その他</a></li>
+                  </ul></div>
+                </div>
+              </div>
+            </li>
+            <li><span class="en"></span><span class="ja"></span></a></li>
+            <li class="cart"><a href="https://basket.step.rakuten.co.jp/rms/mall/bs/cart/?shop_bid=445073" target="_top"><span class="en">CART</span><span class="ja">買い物かご</span></a></li>
+          </ul>
+        </nav>
+
+        <!-- ③ 検索＋注目キーワード -->
+        <!-- <div class="search-wrap">
+          <div class="search-block">
+            <form method="get" action="https://esearch.rakuten.co.jp/rms/sd/esearch/vc" target="_top">
+              <input type="hidden" name="sv" value="6">
+              <input type="hidden" name="sid" value="445073">
+              <input type="hidden" name="su" value="aki-select">
+              <input type="hidden" name="v" value="3">
+              <dl class="search1">
+                <dt><input type="text" name="sitem" value="" placeholder="キーワード"></dt>
+                <dd><button type="submit">検索</button></dd>
+              </dl>
+            </form>
+            <div class="link-tag">
+              <p class="title">注目キーワード :</p>
+              <p><a href="https://item.rakuten.co.jp/aki-select/c/0000000005/" target="_top">#トップス</a></p>
+              <p><a href="https://item.rakuten.co.jp/aki-select/c/0000000006/" target="_top">#ワンピース</a></p>
+              <p><a href="https://item.rakuten.co.jp/aki-select/c/0000000007/" target="_top">#ボトムス</a></p>
+              <p><a href="https://item.rakuten.co.jp/aki-select/c/0000000019/" target="_top">#SALE</a></p>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
+      <div class="topbar__inner">
+
+        <!-- 商品スライド帯（Swiper Free Mode・各カテゴリーの代表商品1件・2026-11-01時点のライブ取得） -->
+        <div class="topbar__items">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/a5765/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/a5765/sa5765_top24.jpg?fitin=600:600" alt="a5765">
+                  <span class="cat">トップス</span>
+                  <span class="name">選べる5タイプ ネック・袖丈・裏起毛 タートルネック ラウンドネック 長袖 五分袖 シースルートップス シアーインナー</span>
+                  <span class="price">2,740円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9395/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa9395/1.jpg?fitin=600:600" alt="sa9395">
+                  <span class="cat">アウター</span>
+                  <span class="name">デニムブルゾン ショート丈 ジージャン ブルゾン 春ブルゾン 春秋ジャケット 襟なし 上着 羽織 大人カジュアル</span>
+                  <span class="price">6,550円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9560/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa9560/sa9560_top15.jpg?fitin=600:600" alt="sa9560">
+                  <span class="cat">ボトムス</span>
+                  <span class="name">選べる3タイプ 裏起毛なし 微起毛 裏起毛 楽革命デニム ロング丈 レギュラー丈 ストレートデニムパンツ ジーンズ</span>
+                  <span class="price">7,700円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9979/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa9979/sa9979_top9.jpg?fitin=600:600" alt="sa9979">
+                  <span class="cat">ワンピース</span>
+                  <span class="name">選べる3タイプ 着やせワンピース ギャザーワンピース 細見えワンピース サイドギャザー ロング丈</span>
+                  <span class="price">4,580円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9402/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa9402/sa9402_top16.jpg?fitin=600:600" alt="sa9402">
+                  <span class="cat">スカート</span>
+                  <span class="name">選べる2タイプ 裏起毛なし 裏起毛あり アンクル丈 ロング丈 S M L ロングナロースカート ロングタイトスカート</span>
+                  <span class="price">6,060円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9807/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa9807/1.jpg?fitin=600:600" alt="sa9807">
+                  <span class="cat">セット売り</span>
+                  <span class="name">オフショルダーセットアップ 上下セット 2点 セット 楽ちんセットアップ ニット オフショルダー パンツ レディース カジュアル</span>
+                  <span class="price">9,200円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa10067/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa10067/sa10067_top3.jpg?fitin=600:600" alt="sa10067">
+                  <span class="cat">オールインワン</span>
+                  <span class="name">キャミソールサロペット ハイウエストパンツ タックパンツ ストレートパンツ ポケット付き ゆったり 体型カバー</span>
+                  <span class="price">6,090円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa7215/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa7215/1.jpg?fitin=600:600" alt="sa7215">
+                  <span class="cat">小物</span>
+                  <span class="name">鮮やかなサクランボモチーフヘアゴム、春おしゃれアイテム◎ヘアゴム レディース 髪留め ドット柄 小さめ リボン付き</span>
+                  <span class="price">2,100円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa10632/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa10632/sa10632_top.jpg?fitin=600:600" alt="sa10632">
+                  <span class="cat">インナー</span>
+                  <span class="name">シームレスブラジャー 脇高ブラ ひびきにくい 締め付けない 脇肉 Uバック カップ付き 軽量 軽い 通気性 ワイヤーなし</span>
+                  <span class="price">2,720円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa8891/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa8891/sa8891_top.jpg?fitin=600:600" alt="sa8891">
+                  <span class="cat">帽子</span>
+                  <span class="name">紫外線 カット 遮光 冷感 小顔効果 綿100％ おすすめ プレゼント帽子 レディース 大きいサイズ キャップ CAP</span>
+                  <span class="price">2,740円</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9807/" target="_top">
+                  <img class="pic" src="https://tshop.r10s.jp/aki-select/cabinet/aki01/akipop/sa9807/1.jpg?fitin=600:600" alt="sa9807">
+                  <span class="cat">ルームウェア</span>
+                  <span class="name">オフショルダーセットアップ 上下セット 2点 セット 楽ちんセットアップ ニット オフショルダー パンツ レディース</span>
+                  <span class="price">9,200円</span>
+                </a>
+              </div>
+
+            </div>
+            <!-- ページネーション（デモ準拠） -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper（Free Mode デモ準拠） -->
+    <script type="text/javascript">
+      var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 30,
+        freeMode: true,
+        autoplay: {
+          delay: 3000,           // 3秒ごとに自動送り
+          disableOnInteraction: false  // ドラッグ後も自動再生を継続
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        // ブラウザ幅が小さいときは表示枚数を減らし、隙間（spaceBetween）の下限を確保する
+        breakpoints: {
+          0:    { slidesPerView: 2, spaceBetween: 8 },   // スマホ：最低8pxの隙間
+          600:  { slidesPerView: 3, spaceBetween: 15 },
+          1024: { slidesPerView: 4, spaceBetween: 20 },
+          1400: { slidesPerView: 4, spaceBetween: 30 }   // PC：4枚表示
+        }
+      });
+    </script>
+
+  </body>
+</html>

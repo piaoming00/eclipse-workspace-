@@ -1,0 +1,94 @@
+<!-- フッターコンテンツ（INFORMATION）：フッター／説明欄の下部に貼り付け -->
+<style>
+  .aki-info, .aki-info *, .aki-info *::before, .aki-info *::after { box-sizing: border-box; }
+  .aki-info {
+    max-width: 1070px; /* ヘッダーと同じ幅（1528px × 0.7）。変更はここ */
+    margin: 0 auto;   /* 中央寄せ */
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    --line: #000;
+    color: #000;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.9;
+    padding: 42px 20px 56px;
+  }
+  .aki-info a { color: inherit; text-decoration: underline; }
+  .aki-info a:focus-visible { outline: 2px solid #000; outline-offset: 3px; }
+  .aki-info .title { margin: 0 0 40px; text-align: center; font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 30px; font-weight: 400; letter-spacing: .08em; }
+  .aki-info .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 52px; align-items: start; }
+  .aki-info .block { margin-bottom: 42px; }
+  .aki-info .block h3 { margin: 0 0 14px; padding-bottom: 7px; border-bottom: 1px solid var(--line); font-size: 17px; font-weight: 400; line-height: 1.6; }
+  .aki-info .block p { margin: 0 0 14px; }
+  .aki-info .block p.note { margin-top: 18px; }
+  .aki-info .block ul { margin: 0; padding: 0; list-style: none; }
+  .aki-info .block ul li::before { content: "\25A0  "; }
+  .aki-info .more { text-align: right; margin: 0; }
+  .aki-info .btn { display: block; width: 100%; max-width: 460px; margin-top: 20px; padding: 14px; border: 1px solid var(--line); text-align: center; text-decoration: none; line-height: 1.6; }
+  .aki-info .btn:hover { background: #000; color: #fff; }
+
+  /* 画面が狭いとき */
+  @media (max-width: 700px) {
+    .aki-info .columns { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="aki-info">
+  <h2 class="title">INFORMATION</h2>
+
+  <div class="columns">
+    <!-- 左カラム -->
+    <div class="col">
+      <div class="block">
+        <h3>お支払いについて</h3>
+        <p>当店でのご利用可能な決済方法は以下のとおりです。</p>
+        <ul>
+          <li>クレジットカード決済</li>
+          <li>銀行振込</li>
+          <li>後払い決済</li>
+          <li>セブンイレブン（前払）</li>
+          <li>ローソン、郵便局ATM等（前払）</li>
+        </ul>
+        <p class="more"><a href="https://rshop.rms.rakuten.co.jp/rms/mall/rsf/shop/vc?__event=WL12_001_001">→詳しくはこちら</a></p>
+      </div>
+
+      <div class="block">
+        <h3>配送について</h3>
+        <p><strong>お買い上げ金額にかかわらず全品送料無料</strong><br>
+          宅配便：日本郵便（ゆうパック）<br>
+          メール便：日本郵便（ゆうパケット）</p>
+        <p class="note">※お客様都合でのご返品の際には、配送料（ゆうパック850円／ゆうパケット300円）をお客様にご負担いただく場合がございます。</p>
+        <p class="more"><a href="https://rshop.rms.rakuten.co.jp/rms/mall/rsf/shop/vc?__event=WL12_001_001">→詳しくはこちら</a></p>
+      </div>
+
+      <div class="block">
+        <h3>返品交換について</h3>
+        <p><a href="https://rshop.rms.rakuten.co.jp/rms/mall/rsf/shop/vc?__event=WL12_001_001#companyCustomerCancel">→詳しくはこちらをご確認ください。</a></p>
+      </div>
+    </div>
+
+    <!-- 右カラム -->
+    <div class="col">
+      <div class="block">
+        <h3>商品在庫について</h3>
+        <p>システムで在庫の調整を行っております。タイミングにより在庫にズレが生じ、在庫数更新が間に合わず、欠品となる場合もございます。 大変ご迷惑をお掛けしますがあらかじめご了承ください。</p>
+      </div>
+
+      <div class="block">
+        <h3>営業時間について</h3>
+        <p>■営業時間：月〜金 10:00〜17:00<br>
+          ■休業日：土・日・祝</p>
+        <p>※営業時間外のお問い合わせに関しては翌営業日の受付となります。<br>
+          ※ご注文は24時間受付しております。</p>
+      </div>
+
+      <div class="block">
+        <h3>会社概要</h3>
+        <p>Ｃｒｅｓｃｅｎｔ株式会社<br>
+          〒102-0071<br>
+          東京都千代田区富士見１−３−１１　富士見デュープレックスＢ’ｓ　４Ｆ<br>
+          TEL: 090-1240-8483（平日10時〜17時）</p>
+        <a class="btn" href="https://inquiry.my.rakuten.co.jp/shop/445073?ms=500">お問い合わせはこちらから</a>
+      </div>
+    </div>
+  </div>
+</section>

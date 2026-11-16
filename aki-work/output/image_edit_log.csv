@@ -1,0 +1,26 @@
+datetime,source,output,variant,note
+2026-11-11 19:43:52,img/top/IMG_1674.JPG,img/top/IMG_1674-bga.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 19:43:52,img/top/IMG_1674.JPG,img/top/IMG_1674-bgb.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 19:43:52,img/top/IMG_1674.JPG,img/top/IMG_1674-bgc.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 19:43:57,img/top/IMG_1676.JPG,img/top/IMG_1676-bga.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 19:43:57,img/top/IMG_1676.JPG,img/top/IMG_1676-bgb.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 19:43:57,img/top/IMG_1676.JPG,img/top/IMG_1676-bgc.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:04:01,img/top/IMG_1674.JPG,img/top/IMG_1674-4k.jpg,4k-clean-bg,背景を元色(207, 185, 150)でクリーン化し3840px幅に拡大
+2026-11-11 20:04:03,img/top/IMG_1676.JPG,img/top/IMG_1676-4k.jpg,4k-clean-bg,背景を元色(207, 185, 150)でクリーン化し3840px幅に拡大
+2026-11-11 20:04:13,img/top/IMG_1674.JPG,img/top/IMG_1674-4k.jpg,4k-clean-bg,背景を元色(207, 185, 150)でクリーン化し3840px幅に拡大
+2026-11-11 20:04:15,img/top/IMG_1676.JPG,img/top/IMG_1676-4k.jpg,4k-clean-bg,背景を元色(207, 185, 150)でクリーン化し3840px幅に拡大
+2026-11-11 20:06:37,img/top/IMG_1674.JPG,img/top/IMG_1674-walld.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:06:49,img/top/IMG_1674.JPG,img/top/IMG_1674-walld.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:07:20,img/top/IMG_1674.JPG,img/top/IMG_1674-walld.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:07:39,img/top/IMG_1674.JPG,img/top/IMG_1674-walld.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:08:33,img/top/IMG_1674.JPG,img/top/IMG_1674-bgc.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:08:33,img/top/IMG_1674.JPG,img/top/IMG_1674-bgd.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:08:37,img/top/IMG_1676.JPG,img/top/IMG_1676-bgc.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:08:37,img/top/IMG_1676.JPG,img/top/IMG_1676-bgd.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:08:53,img/top/IMG_1674.JPG,img/top/IMG_1674-4k-wall.jpg,4k-wall-bg,漆喰壁スタイル背景で3840px幅に拡大
+2026-11-11 20:08:57,img/top/IMG_1676.JPG,img/top/IMG_1676-4k-wall.jpg,4k-wall-bg,漆喰壁スタイル背景で3840px幅に拡大
+2026-11-11 20:10:41,img/top/IMG_1674.JPG,img/top/IMG_1674-wall-softd.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:10:44,img/top/IMG_1674.JPG,img/top/IMG_1674-wall-strongd.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:10:47,img/top/IMG_1674.JPG,img/top/IMG_1674-wall-maxd.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
+2026-11-11 20:11:07,img/top/IMG_1674.JPG,img/top/IMG_1674-4k-strong-wall.jpg,4k-wall-bg,漆喰壁スタイル背景で3840px幅に拡大
+2026-11-11 20:11:11,img/top/IMG_1676.JPG,img/top/IMG_1676-4k-strong-wall.jpg,4k-wall-bg,漆喰壁スタイル背景で3840px幅に拡大

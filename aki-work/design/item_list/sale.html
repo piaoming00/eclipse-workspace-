@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【 aki-select 】autumn SALE</title>
+<style>
+:root{
+  --cream:#F7F3EC; --paper:#F2EDE4; --card:#FFFCF6;
+  --line:#D8CFC2; --acc:#BF6B6B; --acc-deep:#A85A5A;
+  --beige:#B7A99A; --ink:#5A5048; --ink-soft:#8A7F70;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--cream);font-family:'Noto Sans JP','Yu Gothic',sans-serif;color:var(--ink);letter-spacing:.01em;}
+img{width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+/* HERO */
+.hero{text-align:center;padding:64px 16px 40px;background:linear-gradient(180deg,var(--cream),var(--paper));}
+.hero-eyebrow{font-size:.72rem;letter-spacing:.4em;color:var(--ink-soft);margin-bottom:10px;}
+.hero-title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.4rem,8vw,4rem);line-height:1.1;color:var(--ink);}
+.hero-title em{font-style:normal;color:var(--acc);}
+.hero-sub{margin-top:12px;font-size:.95rem;color:var(--ink-soft);}
+.hero-off{display:inline-block;margin-top:18px;font-family:Georgia,serif;font-size:clamp(1.6rem,6vw,2.4rem);font-weight:700;color:var(--acc-deep);border:2px solid var(--acc);border-radius:99px;padding:8px 34px;}
+/* NAV */
+nav{position:sticky;top:0;z-index:9;display:flex;justify-content:center;gap:6px;flex-wrap:wrap;background:var(--cream);border-bottom:1px solid var(--line);padding:10px 8px;}
+nav a{font-size:.7rem;letter-spacing:.18em;color:var(--ink-soft);padding:4px 12px;border-radius:99px;}
+nav a:hover{color:var(--acc);}
+/* COUPON（タイトル下） */
+.hero-coupon{display:flex;align-items:center;gap:12px;max-width:560px;margin:26px auto 0;background:var(--card);border:2px solid var(--acc);border-radius:14px;padding:12px 14px;text-align:left;}
+.hero-coupon .coupon-icon{width:56px;height:56px;object-fit:cover;border-radius:10px;flex:none;}
+.hero-coupon .coupon-lead{font-size:.88rem;font-weight:700;color:var(--ink);}
+.hero-coupon .coupon-note{font-size:.66rem;color:var(--ink-soft);margin-top:2px;}
+.hero-coupon .coupon-btn{margin-left:auto;background:var(--acc);color:#fff;font-size:.95rem;font-weight:700;padding:16px 34px;border-radius:99px;flex:none;letter-spacing:.06em;box-shadow:0 4px 10px rgba(168,90,90,.35);transition:opacity .2s,transform .15s;}
+.hero-coupon:hover .coupon-btn{opacity:.9;transform:translateY(-2px);}
+@media(max-width:560px){.hero-coupon{flex-wrap:wrap;text-align:center;justify-content:center;}.hero-coupon .coupon-btn{width:100%;margin:0;font-size:1rem;padding:14px 20px;}}
+/* SECTION */
+.sec{max-width:960px;margin:0 auto;padding:56px 16px;}
+.sec-head{text-align:center;margin-bottom:36px;}
+.sec-en{font-family:Georgia,serif;font-size:1.05rem;letter-spacing:.28em;color:var(--acc);}
+.sec-ja{font-size:clamp(1.3rem,4.5vw,1.7rem);font-weight:700;margin-top:8px;}
+.sec-note{font-size:.78rem;color:var(--ink-soft);margin-top:10px;}
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+@media(max-width:560px){.grid{grid-template-columns:1fr;}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:box-shadow .2s,transform .2s;}
+.card:hover{box-shadow:0 12px 26px rgba(90,80,72,.12);transform:translateY(-3px);}
+.card-img{position:relative;}
+.card-img img{aspect-ratio:3/4;object-fit:cover;}
+.off{position:absolute;top:10px;left:10px;background:var(--acc);color:#fff;border-radius:10px;padding:6px 10px;font-family:Georgia,serif;line-height:1;}
+.off b{font-size:1.5rem;} .off i{font-size:.9rem;font-style:normal;} .off small{font-size:.7rem;display:block;letter-spacing:.1em;}
+.card-body{padding:14px 14px 16px;}
+.cat{display:inline-block;font-size:.62rem;letter-spacing:.14em;color:var(--acc);border:1px solid var(--acc);border-radius:99px;padding:2px 10px;margin-bottom:8px;}
+.name{font-size:.8rem;color:var(--ink);line-height:1.6;margin-bottom:10px;}
+.price{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--paper);border-radius:8px;padding:10px 12px;}
+.was{font-size:.74rem;color:var(--ink-soft);text-decoration:line-through;}
+.arrow{font-size:.65rem;color:var(--acc);}
+.now{font-size:1.4rem;font-weight:700;color:var(--acc-deep);line-height:1;}
+.now small{font-size:.75rem;font-weight:400;}
+.save{margin-left:auto;font-size:.62rem;font-weight:700;color:#fff;background:var(--beige);border-radius:99px;padding:4px 10px;}
+/* FOOT NOTE */
+.foot{text-align:center;padding:40px 16px 56px;font-size:.72rem;color:var(--ink-soft);}
+.foot .rule{max-width:640px;height:1px;background:var(--line);margin:0 auto 24px;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="hero-eyebrow">aki-select — autumn</p>
+  <h1 class="hero-title">autumn<br><em>SALE</em></h1>
+  <a class="hero-coupon" href="https://coupon.rakuten.co.jp/getCoupon?getkey=RVJKNy0xOUlaLUkzT0gtR042Mw--&rt=" target="_blank" rel="noopener">
+  <img class="coupon-icon" src="https://image.rakuten.co.jp/aki-select/cabinet/page01/coupon/imgrc0120487600.jpg" alt="クーポンアイコン">
+  <div>
+    <p class="coupon-lead">クーポンでさらにポイントアップ！</p>
+    <p class="coupon-note">お買い物前に、クーポン取得をお忘れなく</p>
+  </div>
+  <span class="coupon-btn">取得する →</span>
+</a>
+
+  <p class="hero-sub">✦ お気に入りの一枚を、お得に。 ✦</p>
+  <div class="hero-off">40% OFF</div>
+  <p class="sec-note">期間：確定後に記載（要確認）</p>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#sale">40%OFF</a>
+  <a href="https://www.rakuten.co.jp/aki-select/">SHOP TOP</a>
+</nav>
+
+<!-- SALE -->
+<section class="sec" id="sale">
+  <div class="sec-head">
+    <div class="sec-en">CATEGORY PICK UP</div>
+    <div class="sec-ja">各カテゴリーから、40%OFF。</div>
+    <p class="sec-note">※ 価格は暫定案です。確定前に最低售价（原価下限）との照合・承認が必要です。</p>
+  </div>
+  <div class="grid">
+      <a class="card" href="https://item.rakuten.co.jp/aki-select/a5765/">
+        <div class="card-img"><img src="https://image.rakuten.co.jp/aki-select/cabinet/aki01/akipop/a5765/sa5765_lp_01.jpg" alt="シアートップス シアー トップス 長袖 半袖 ハイネック レース 涼しい カットソー クルーネック シアーTシャツ 薄手"><span class="off"><b>40<i>%</i></b><small>OFF</small></span></div>
+        <div class="card-body">
+          <p class="cat">トップス</p>
+          <p class="name">シアートップス シアー トップス 長袖 半袖 ハイネック レース 涼しい カットソー クルーネック シアーTシャツ 薄手…</p>
+          <div class="price">
+            <span class="was">2,740円</span><span class="arrow">→</span>
+            <span class="now">1,640<small>円</small></span>
+            <span class="save">-1,100円</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9979/">
+        <div class="card-img"><img src="https://image.rakuten.co.jp/aki-select/cabinet/aki01/akipop/sa9979/sa9979_pc1.jpg" alt="ワンピース ウエストギャザー Tシャツワンピース ノースリーブ 半袖 長袖 ロング タイト tシャツ レディース 着痩せ"><span class="off"><b>40<i>%</i></b><small>OFF</small></span></div>
+        <div class="card-body">
+          <p class="cat">ワンピース</p>
+          <p class="name">ワンピース ウエストギャザー Tシャツワンピース ノースリーブ 半袖 長袖 ロング タイト tシャツ レディース 着痩せ…</p>
+          <div class="price">
+            <span class="was">4,580円</span><span class="arrow">→</span>
+            <span class="now">2,750<small>円</small></span>
+            <span class="save">-1,830円</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9560/">
+        <div class="card-img"><img src="https://image.rakuten.co.jp/aki-select/cabinet/aki01/akipop/sa9560/sa9560_p1ss.jpg" alt="「楽 革 命」 疲れないデニム デニムパンツ ウエスト調整 ストレッチ レディース パンツ 裏起毛 ワイド デニム スト"><span class="off"><b>40<i>%</i></b><small>OFF</small></span></div>
+        <div class="card-body">
+          <p class="cat">ボトムス</p>
+          <p class="name">「楽 革 命」 疲れないデニム デニムパンツ ウエスト調整 ストレッチ レディース パンツ 裏起毛 ワイド デニム スト…</p>
+          <div class="price">
+            <span class="was">7,700円</span><span class="arrow">→</span>
+            <span class="now">4,620<small>円</small></span>
+            <span class="save">-3,080円</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9395/">
+        <div class="card-img"><img src="https://image.rakuten.co.jp/aki-select/cabinet/aki01/akipop/sa9395/1.jpg" alt="デニムジャケット レディース ノーカラー ジャケット Gジャン デニム ノーカラーデニムジャケット ノーカラージャケット"><span class="off"><b>40<i>%</i></b><small>OFF</small></span></div>
+        <div class="card-body">
+          <p class="cat">アウター</p>
+          <p class="name">デニムジャケット レディース ノーカラー ジャケット Gジャン デニム ノーカラーデニムジャケット ノーカラージャケット…</p>
+          <div class="price">
+            <span class="was">6,550円</span><span class="arrow">→</span>
+            <span class="now">3,930<small>円</small></span>
+            <span class="save">-2,620円</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="https://item.rakuten.co.jp/aki-select/sa10632/">
+        <div class="card-img"><img src="https://image.rakuten.co.jp/aki-select/cabinet/aki01/akipop/sa10632/sa10632_p1.jpg" alt="ノンワイヤーブラ シームレス ブラ 脇高 ナイトブラ ホックなし 大きいサイズ レディース ブラジャー シームレスブラ "><span class="off"><b>40<i>%</i></b><small>OFF</small></span></div>
+        <div class="card-body">
+          <p class="cat">インナー</p>
+          <p class="name">ノンワイヤーブラ シームレス ブラ 脇高 ナイトブラ ホックなし 大きいサイズ レディース ブラジャー シームレスブラ …</p>
+          <div class="price">
+            <span class="was">2,720円</span><span class="arrow">→</span>
+            <span class="now">1,630<small>円</small></span>
+            <span class="save">-1,090円</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="https://item.rakuten.co.jp/aki-select/sa9807/">
+        <div class="card-img"><img src="https://image.rakuten.co.jp/aki-select/cabinet/aki01/akipop/sa9807/1.jpg" alt="セットアップ ニット オフショルダー パンツ レディース カジュアル ニットセット ワンショルダー ニットセットアップ "><span class="off"><b>40<i>%</i></b><small>OFF</small></span></div>
+        <div class="card-body">
+          <p class="cat">グッズ</p>
+          <p class="name">セットアップ ニット オフショルダー パンツ レディース カジュアル ニットセット ワンショルダー ニットセットアップ …</p>
+          <div class="price">
+            <span class="was">9,200円</span><span class="arrow">→</span>
+            <span class="now">5,520<small>円</small></span>
+            <span class="save">-3,680円</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="https://item.rakuten.co.jp/aki-select/sa10389/">
+        <div class="card-img"><img src="https://image.rakuten.co.jp/aki-select/cabinet/aki01/akipop/sa10389/149.jpg" alt="セットアップ パンツスーツ きれいめ カジュアル レディース ワイドパンツ ジャケット ウエストゴム ワイド パンツ ス"><span class="off"><b>40<i>%</i></b><small>OFF</small></span></div>
+        <div class="card-body">
+          <p class="cat">オフィスカジュアル</p>
+          <p class="name">セットアップ パンツスーツ きれいめ カジュアル レディース ワイドパンツ ジャケット ウエストゴム ワイド パンツ ス…</p>
+          <div class="price">
+            <span class="was">7,590円</span><span class="arrow">→</span>
+            <span class="now">4,550<small>円</small></span>
+            <span class="save">-3,040円</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="https://item.rakuten.co.jp/aki-select/sa10466/">
+        <div class="card-img"><img src="https://image.rakuten.co.jp/aki-select/cabinet/aki01/akipop/sa10466/sa10466_lp_01.jpg" alt="セットアップ レディース カジュアル パンツ パンツセットアップ スウェット ポンチ カットソー 上下 セット カジュア"><span class="off"><b>40<i>%</i></b><small>OFF</small></span></div>
+        <div class="card-body">
+          <p class="cat">セット売り</p>
+          <p class="name">セットアップ レディース カジュアル パンツ パンツセットアップ スウェット ポンチ カットソー 上下 セット カジュア…</p>
+          <div class="price">
+            <span class="was">6,100円</span><span class="arrow">→</span>
+            <span class="now">3,660<small>円</small></span>
+            <span class="save">-2,440円</span>
+          </div>
+        </div>
+      </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="rule"></div>
+  aki-select — Korean Style Select Shop
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+  <head>
+    <title>left menu - CATEGORY (aki-select)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+    <style type="text/css">
+      /* ============================================================
+         aki-select 左ナビゲーション
+         K-fashion × くすみカラー（oatmeal / textbrown / accentred）
+         ============================================================ */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "メイリオ", sans-serif;
+        font-size: 12px;
+        line-height: 1.6;
+        letter-spacing: 0.06em;
+        color: #5A5048;
+      }
+      a {
+        color: #5A5048;
+        text-decoration: none;
+      }
+      ul { list-style: none; }
+      li { height: auto; }
+
+      /* ---------- コンテナ ---------- */
+      #container {
+        width: 280px;
+        overflow: hidden;
+        background: #FFFDF9;
+        border: 1px solid #EAE2D5;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px rgba(90, 80, 72, 0.08);
+      }
+      #list_area {
+        width: 280px;
+        overflow: hidden;
+      }
+      #list_wrapper {
+        width: 280px;
+        overflow: hidden;
+      }
+      #list_wrapper li {
+        width: 280px;
+      }
+
+      /* ---------- 見出し ---------- */
+      #list_area h2 {
+        position: relative;
+        margin: 0;
+        padding: 22px 18px 16px;
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        line-height: 1.35;
+        color: #5A5048;
+        background: #FFFDF9;
+        border-bottom: 1px solid #EAE2D5;
+      }
+      #list_area h2::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin: 0 11px 0 2px;
+        background: #BF6B6B;
+        transform: rotate(45deg);
+      }
+      #list_area h2::after {
+        content: "カテゴリーから探す";
+        display: block;
+        margin-top: 5px;
+        padding-left: 21px;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.3em;
+        color: #B7A99A;
+      }
+
+      /* ---------- 大分類（level1） ---------- */
+      a.level1a {
+        position: relative;
+        display: block;
+        width: 280px;
+        box-sizing: border-box;
+        background: #F2EDE4;
+        border-bottom: 1px solid #EAE2D5;
+        transition: background-color .25s ease;
+      }
+      a.level1a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        background: #BF6B6B;
+        transition: width .25s ease;
+      }
+      a.level1a::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 11px;
+        color: #C9BCAE;
+        transition: color .25s ease, transform .25s ease;
+      }
+      a.level1a span {
+        display: block;
+        padding: 13px 40px 13px 18px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        line-height: 1.5;
+        color: #5A5048;
+        transition: padding-left .25s ease, color .25s ease;
+      }
+      a.level1a:hover,
+      a.level1a:focus {
+        background: #FFFDF9;
+      }
+      a.level1a:hover::before,
+      a.level1a:focus::before {
+        width: 3px;
+      }
+      a.level1a:hover::after,
+      a.level1a:focus::after {
+        color: #BF6B6B;
+        transform: translate(4px, -50%);
+      }
+      a.level1a:hover span,
+      a.level1a:focus span {
+        padding-left: 24px;
+        color: #4A423B;
+      }
+
+      /* ---------- 中分類（level2） ---------- */
+      a.level2 {
+        position: relative;
+        display: block;
+        width: 280px;
+        box-sizing: border-box;
+        background: #FFFDF9;
+        border-bottom: 1px dotted #E2D9CC;
+        transition: background-color .2s ease;
+      }
+      a.level2::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        width: 5px;
+        height: 5px;
+        transform: translateY(-50%) rotate(45deg);
+        background: #D8CDBF;
+        transition: background-color .2s ease;
+      }
+      a.level2 span {
+        display: block;
+        padding: 10px 16px 10px 36px;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        color: #6B615A;
+        transition: color .2s ease, padding-left .2s ease;
+      }
+      a.level2:hover,
+      a.level2:focus {
+        background: #F7F2EA;
+      }
+      a.level2:hover::before,
+      a.level2:focus::before {
+        background: #BF6B6B;
+      }
+      a.level2:hover span,
+      a.level2:focus span {
+        color: #BF6B6B;
+        padding-left: 40px;
+      }
+
+      /* ---------- 小分類（level3） ---------- */
+      a.level3 {
+        position: relative;
+        display: block;
+        width: 280px;
+        box-sizing: border-box;
+        background: #FFFDF9;
+        border-bottom: 1px dotted #EDE6DA;
+        transition: background-color .2s ease;
+      }
+      a.level3::before {
+        content: "";
+        position: absolute;
+        left: 34px;
+        top: 50%;
+        width: 8px;
+        height: 1px;
+        background: #D8CDBF;
+        transition: background-color .2s ease, width .2s ease;
+      }
+      a.level3 span {
+        display: block;
+        padding: 8px 16px 8px 52px;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        color: #9A8F84;
+        transition: color .2s ease, padding-left .2s ease;
+      }
+      a.level3:hover,
+      a.level3:focus {
+        background: #F7F2EA;
+      }
+      a.level3:hover::before,
+      a.level3:focus::before {
+        background: #BF6B6B;
+        width: 14px;
+      }
+      a.level3:hover span,
+      a.level3:focus span {
+        color: #6B615A;
+        padding-left: 56px;
+      }
+
+      /* ---------- 特別カテゴリ ---------- */
+      /* SALE：くすみレッド */
+      li.sale a.level1a {
+        background: #F5DEDE;
+        border-bottom-color: #EBC9C9;
+      }
+      li.sale a.level1a::after {
+        color: #BF6B6B;
+      }
+      li.sale a.level1a span {
+        color: #BF6B6B;
+        font-weight: 700;
+      }
+      li.sale a.level1a:hover,
+      li.sale a.level1a:focus {
+        background: #FBE9E9;
+      }
+
+      /* 新作：くすみイエロー＋NEWバッジ */
+      li.new a.level1a {
+        background: #F6EFD9;
+        border-bottom-color: #E9E0C2;
+      }
+      li.new a.level1a span::after {
+        content: "NEW";
+        display: inline-block;
+        margin-left: 8px;
+        padding: 1px 8px;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        color: #A98A4A;
+        background: #FFFDF9;
+        border: 1px solid #E0D5B4;
+        border-radius: 10px;
+        vertical-align: 2px;
+        transition: background-color .2s ease;
+      }
+      li.new a.level1a:hover span::after,
+      li.new a.level1a:focus span::after {
+        background: #FFF7E0;
+      }
+</style>
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <!-- CATEGORY（aki-select sa9979 記載の14カテゴリ＋表示サブカテゴリ階層） -->
+      <div id="list_area">
+        <h2>CATEGORY</h2>
+        <div id="list_wrapper">
+          <ul>
+            <!----2026新作アイテム---->
+            <li class="new"><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000002/" target="_top"><span>2026新作アイテム</span></a></li>
+
+            <!----トップス---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000005/" target="_top"><span>トップス</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000028/" target="_top"><span>ニット・セーター</span></a></li>
+            <li><a class="level3" href="https://item.rakuten.co.jp/aki-select/c/0000000037/" target="_top"><span>半袖</span></a></li>
+            <li><a class="level3" href="https://item.rakuten.co.jp/aki-select/c/0000000038/" target="_top"><span>長袖</span></a></li>
+            <li><a class="level3" href="https://item.rakuten.co.jp/aki-select/c/0000000039/" target="_top"><span>ノースリーブ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000029/" target="_top"><span>Tシャツ・カットソー</span></a></li>
+            <li><a class="level3" href="https://item.rakuten.co.jp/aki-select/c/0000000040/" target="_top"><span>半袖</span></a></li>
+            <li><a class="level3" href="https://item.rakuten.co.jp/aki-select/c/0000000041/" target="_top"><span>長袖</span></a></li>
+            <li><a class="level3" href="https://item.rakuten.co.jp/aki-select/c/0000000042/" target="_top"><span>タンクトップ・キャミソール</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000030/" target="_top"><span>チュニック</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000031/" target="_top"><span>シャツ・ブラウス</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000032/" target="_top"><span>トレーナー</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000033/" target="_top"><span>セットアップ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000034/" target="_top"><span>カーディガン</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000035/" target="_top"><span>パーカー</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000036/" target="_top"><span>ベスト・ジレ</span></a></li>
+
+            <!----ワンピース---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000006/" target="_top"><span>ワンピース</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000044/" target="_top"><span>ショート・チュニック</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000045/" target="_top"><span>ミディアム</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000046/" target="_top"><span>ロング</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000043/" target="_top"><span>オールインワン・サロペット</span></a></li>
+
+            <!----ボトムス---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000007/" target="_top"><span>ボトムス</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000047/" target="_top"><span>パンツ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000048/" target="_top"><span>スカート</span></a></li>
+
+            <!----アウター---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000008/" target="_top"><span>アウター</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000049/" target="_top"><span>コート</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000050/" target="_top"><span>ジャケット</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000051/" target="_top"><span>ブルゾン</span></a></li>
+
+            <!----インナー---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000009/" target="_top"><span>インナー</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000052/" target="_top"><span>タンクトップ・キャミソール</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000053/" target="_top"><span>ブラ・ショーツ</span></a></li>
+
+            <!----オフィスカジュアル---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000011/" target="_top"><span>オフィスカジュアル</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000066/" target="_top"><span>シャツ・ブラウス</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000067/" target="_top"><span>ニット・セーター</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000068/" target="_top"><span>ワンピース</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000069/" target="_top"><span>アウター</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000070/" target="_top"><span>ボトムス</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000071/" target="_top"><span>バッグ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000072/" target="_top"><span>シューズ</span></a></li>
+
+            <!----グッズ---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000010/" target="_top"><span>グッズ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000057/" target="_top"><span>バッグ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000056/" target="_top"><span>シューズ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000059/" target="_top"><span>帽子</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000058/" target="_top"><span>アクセサリー</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000060/" target="_top"><span>マフラー・手袋・ベルト</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000054/" target="_top"><span>レギンス・タイツ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000055/" target="_top"><span>靴下</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000061/" target="_top"><span>レイングッズ</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000062/" target="_top"><span>スイムウェア</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000063/" target="_top"><span>ルームウェア</span></a></li>
+            <li><a class="level2" href="https://item.rakuten.co.jp/aki-select/c/0000000065/" target="_top"><span>美容</span></a></li>
+
+            <!----SALE---->
+            <!-- <li class="sale"><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000019/" target="_top"><span>SALE</span></a></li> -->
+
+            <!----UVケアアイテム---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000013/" target="_top"><span>UVケアアイテム</span></a></li>
+
+            <!----裏起毛アイテム---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000012/" target="_top"><span>裏起毛アイテム</span></a></li>
+
+            <!----セット売り---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000015/" target="_top"><span>セット売り</span></a></li>
+
+            <!----リゾートアイテム---->
+            <!-- <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000014/" target="_top"><span>リゾートアイテム</span></a></li> -->
+
+            <!----その他---->
+            <li><a class="level1a" href="https://item.rakuten.co.jp/aki-select/c/0000000001/" target="_top"><span>その他</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- container -->
+
+  </body>
+</html>

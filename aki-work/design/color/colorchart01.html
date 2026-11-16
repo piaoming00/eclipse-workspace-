@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>カラー一覧 | aki-select</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0 0 60px; background: #f2f2f2; color: #333;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  line-height: 1.4; }
+a { color: #333; }
+#wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+h1 { font-size: 26px; font-weight: 500; letter-spacing: .12em; text-align: center;
+  padding: 36px 0 6px; margin: 0; }
+.lead { text-align: center; font-size: 12px; color: #888; margin: 0 0 30px; }
+section { background: #fff; padding: 18px 16px 8px; margin: 0 0 18px; }
+section > h2 { font-size: 14px; font-weight: 600; letter-spacing: .14em; color: #555;
+  margin: 0 0 12px; padding: 0 0 8px; border-bottom: 1px solid #e6e6e6; }
+.grid { display: flex; flex-wrap: wrap; }
+.chip { width: 12.5%; padding: 3px; }
+.chip > div { border: 1px solid #e6e6e6; }
+.sw { height: 62px; position: relative; }
+.sw span { position: absolute; left: 4px; bottom: 3px; font-size: 9px;
+  font-family: "din-2014", Arial, sans-serif; letter-spacing: .04em; }
+.name { font-size: 11px; padding: 5px 5px 0; min-height: 32px; }
+.cn { font-size: 10px; color: #888; padding: 0 5px 6px; }
+@media (max-width: 860px) { .chip { width: 25%; } }
+@media (max-width: 520px) { .chip { width: 33.333%; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<div id="wrap">
+<h1>カラー一覧</h1>
+<p class="lead">日本語カラー名 / 中国語名 / 色見本（全 111 色）</p>
+
+<section>
+<h2>ホワイト・アイボリー</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#FFFFFF"><span style="color:#333333">#FFFFFF</span></div><div class="name">ホワイト</div><div class="cn">白色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#F7F4EF"><span style="color:#333333">#F7F4EF</span></div><div class="name">オフホワイト</div><div class="cn">米白色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#F5EFDC"><span style="color:#333333">#F5EFDC</span></div><div class="name">アイボリー</div><div class="cn">象牙白</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E8DCC8"><span style="color:#333333">#E8DCC8</span></div><div class="name">ナチュラル</div><div class="cn">自然色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#F3E5AB"><span style="color:#333333">#F3E5AB</span></div><div class="name">バニラ</div><div class="cn">香草色</div></div></div>
+</div>
+</section>
+<section>
+<h2>ブラック・グレー</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#000000"><span style="color:#FFFFFF">#000000</span></div><div class="name">ブラック</div><div class="cn">黑色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#2B2B2B"><span style="color:#FFFFFF">#2B2B2B</span></div><div class="name">チャコールブラック</div><div class="cn">炭黑色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#808080"><span style="color:#FFFFFF">#808080</span></div><div class="name">グレー</div><div class="cn">灰色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C8C8C8"><span style="color:#333333">#C8C8C8</span></div><div class="name">ライトグレー</div><div class="cn">浅灰色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#4D4D4D"><span style="color:#FFFFFF">#4D4D4D</span></div><div class="name">ダークグレー</div><div class="cn">深灰色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#3C3C3C"><span style="color:#FFFFFF">#3C3C3C</span></div><div class="name">チャコールグレー</div><div class="cn">炭灰色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#4A4E52"><span style="color:#FFFFFF">#4A4E52</span></div><div class="name">ガンメタ</div><div class="cn">炮铜色（枪灰色）</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#B8ADA6"><span style="color:#333333">#B8ADA6</span></div><div class="name">グレージュ</div><div class="cn">灰褐色（灰米色）</div></div></div>
+</div>
+</section>
+<section>
+<h2>ブラウン</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#6B4C3A"><span style="color:#FFFFFF">#6B4C3A</span></div><div class="name">ブラウン</div><div class="cn">棕色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#A87C5F"><span style="color:#FFFFFF">#A87C5F</span></div><div class="name">ライトブラウン</div><div class="cn">浅棕色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#3E2A20"><span style="color:#FFFFFF">#3E2A20</span></div><div class="name">ダークブラウン</div><div class="cn">深棕色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#4A2C1D"><span style="color:#FFFFFF">#4A2C1D</span></div><div class="name">ショコラブラウン</div><div class="cn">巧克力棕</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C19A6B"><span style="color:#333333">#C19A6B</span></div><div class="name">キャメル</div><div class="cn">驼色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C68A4F"><span style="color:#FFFFFF">#C68A4F</span></div><div class="name">キャラメル</div><div class="cn">焦糖色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#7B5B47"><span style="color:#FFFFFF">#7B5B47</span></div><div class="name">モカ</div><div class="cn">摩卡色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#6F4E37"><span style="color:#FFFFFF">#6F4E37</span></div><div class="name">モカブラウン</div><div class="cn">摩卡棕</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#A97142"><span style="color:#FFFFFF">#A97142</span></div><div class="name">ブロンズ</div><div class="cn">青铜色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#6E4B2A"><span style="color:#FFFFFF">#6E4B2A</span></div><div class="name">ダークブロンズ</div><div class="cn">深青铜色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#9C6B3A"><span style="color:#FFFFFF">#9C6B3A</span></div><div class="name">ダークオークル</div><div class="cn">深赭色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#4B3621"><span style="color:#FFFFFF">#4B3621</span></div><div class="name">コーヒー</div><div class="cn">咖啡色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#800000"><span style="color:#FFFFFF">#800000</span></div><div class="name">マルーン</div><div class="cn">栗色（暗红褐）</div></div></div>
+</div>
+</section>
+<section>
+<h2>ベージュ</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#E3D5C0"><span style="color:#333333">#E3D5C0</span></div><div class="name">ベージュ</div><div class="cn">米色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#F0E6D8"><span style="color:#333333">#F0E6D8</span></div><div class="name">ライトベージュ</div><div class="cn">浅米色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C8B29A"><span style="color:#333333">#C8B29A</span></div><div class="name">モカベージュ</div><div class="cn">摩卡米色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FFFDD0"><span style="color:#333333">#FFFDD0</span></div><div class="name">クリーム</div><div class="cn">奶油色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#D9CFBB"><span style="color:#333333">#D9CFBB</span></div><div class="name">オートミール</div><div class="cn">燕麦色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#F0EAD6"><span style="color:#333333">#F0EAD6</span></div><div class="name">エクリュ</div><div class="cn">胚布色</div></div></div>
+</div>
+</section>
+<section>
+<h2>イエロー</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#FFD700"><span style="color:#333333">#FFD700</span></div><div class="name">イエロー</div><div class="cn">黄色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FFF3A0"><span style="color:#333333">#FFF3A0</span></div><div class="name">ライトイエロー</div><div class="cn">浅黄色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E1AD01"><span style="color:#333333">#E1AD01</span></div><div class="name">マスタード</div><div class="cn">芥末黄</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FFF44F"><span style="color:#333333">#FFF44F</span></div><div class="name">レモンイエロー</div><div class="cn">柠檬黄</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E8FF00"><span style="color:#333333">#E8FF00</span></div><div class="name">ネオンイエロー</div><div class="cn">荧光黄</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#B8860B"><span style="color:#FFFFFF">#B8860B</span></div><div class="name">ダークイエロー</div><div class="cn">深黄色（土黄）</div></div></div>
+</div>
+</section>
+<section>
+<h2>ブルー</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#0066CC"><span style="color:#FFFFFF">#0066CC</span></div><div class="name">ブルー</div><div class="cn">蓝色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#7EC8E3"><span style="color:#333333">#7EC8E3</span></div><div class="name">ライトブルー</div><div class="cn">浅蓝色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#003366"><span style="color:#FFFFFF">#003366</span></div><div class="name">ダークブルー</div><div class="cn">深蓝色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#87CEEB"><span style="color:#333333">#87CEEB</span></div><div class="name">スカイブルー</div><div class="cn">天蓝色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#4169E1"><span style="color:#FFFFFF">#4169E1</span></div><div class="name">ロイヤルブルー</div><div class="cn">宝蓝色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#000080"><span style="color:#FFFFFF">#000080</span></div><div class="name">ネイビー</div><div class="cn">藏青色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#1B2A4A"><span style="color:#FFFFFF">#1B2A4A</span></div><div class="name">ネイビーブルー</div><div class="cn">藏青蓝</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#7FA6C9"><span style="color:#333333">#7FA6C9</span></div><div class="name">サックスブルー</div><div class="cn">灰蓝色（萨克森蓝）</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#40E0D0"><span style="color:#333333">#40E0D0</span></div><div class="name">ターコイズ</div><div class="cn">绿松石色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#0047AB"><span style="color:#FFFFFF">#0047AB</span></div><div class="name">コバルトブルー</div><div class="cn">钴蓝色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#2B4C9B"><span style="color:#FFFFFF">#2B4C9B</span></div><div class="name">トリコロール</div><div class="cn">三色蓝</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#2A4B8D"><span style="color:#FFFFFF">#2A4B8D</span></div><div class="name">インディゴブルー</div><div class="cn">靛蓝色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#1A2E5A"><span style="color:#FFFFFF">#1A2E5A</span></div><div class="name">ダークインディゴブルー</div><div class="cn">深靛蓝</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#6E7CA0"><span style="color:#FFFFFF">#6E7CA0</span></div><div class="name">ユーズド</div><div class="cn">做旧蓝（水洗蓝）</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C9D3DE"><span style="color:#333333">#C9D3DE</span></div><div class="name">ブリーチ</div><div class="cn">漂白蓝</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#DDE5ED"><span style="color:#333333">#DDE5ED</span></div><div class="name">ライトブリーチ</div><div class="cn">浅漂白蓝</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#EFF3F7"><span style="color:#333333">#EFF3F7</span></div><div class="name">スーパーブリーチ</div><div class="cn">超漂白蓝</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#101B33"><span style="color:#FFFFFF">#101B33</span></div><div class="name">ダークネイビー</div><div class="cn">深藏青</div></div></div>
+</div>
+</section>
+<section>
+<h2>グリーン</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#008000"><span style="color:#FFFFFF">#008000</span></div><div class="name">グリーン</div><div class="cn">绿色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#90EE90"><span style="color:#333333">#90EE90</span></div><div class="name">ライトグリーン</div><div class="cn">浅绿色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#013220"><span style="color:#FFFFFF">#013220</span></div><div class="name">ダークグリーン</div><div class="cn">深绿色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#98FF98"><span style="color:#333333">#98FF98</span></div><div class="name">ミント</div><div class="cn">薄荷绿</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#50C878"><span style="color:#333333">#50C878</span></div><div class="name">エメラルドグリーン</div><div class="cn">翡翠绿</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#808000"><span style="color:#FFFFFF">#808000</span></div><div class="name">オリーブ</div><div class="cn">橄榄绿</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C3B091"><span style="color:#333333">#C3B091</span></div><div class="name">カーキ</div><div class="cn">卡其色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#6B6B4A"><span style="color:#FFFFFF">#6B6B4A</span></div><div class="name">ダークカーキ</div><div class="cn">深卡其</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#2E8B8B"><span style="color:#FFFFFF">#2E8B8B</span></div><div class="name">グリーンブルー</div><div class="cn">蓝绿色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#32CD32"><span style="color:#333333">#32CD32</span></div><div class="name">ライムグリーン</div><div class="cn">青柠绿</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#00A9A5"><span style="color:#FFFFFF">#00A9A5</span></div><div class="name">ブルーグリーン</div><div class="cn">青绿色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#8A9A5B"><span style="color:#FFFFFF">#8A9A5B</span></div><div class="name">モスグリーン</div><div class="cn">苔藓绿</div></div></div>
+</div>
+</section>
+<section>
+<h2>パープル</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#800080"><span style="color:#FFFFFF">#800080</span></div><div class="name">パープル</div><div class="cn">紫色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C39BD3"><span style="color:#333333">#C39BD3</span></div><div class="name">ライトパープル</div><div class="cn">浅紫色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#301934"><span style="color:#FFFFFF">#301934</span></div><div class="name">ダークパープル</div><div class="cn">深紫色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#B57EDC"><span style="color:#FFFFFF">#B57EDC</span></div><div class="name">ラベンダー</div><div class="cn">薰衣草紫</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#7F00FF"><span style="color:#FFFFFF">#7F00FF</span></div><div class="name">バイオレット</div><div class="cn">紫罗兰</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#36013F"><span style="color:#FFFFFF">#36013F</span></div><div class="name">ディープパープル</div><div class="cn">暗紫色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#D4739E"><span style="color:#FFFFFF">#D4739E</span></div><div class="name">パープルピンク</div><div class="cn">紫粉色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#9966CC"><span style="color:#FFFFFF">#9966CC</span></div><div class="name">アメジスト</div><div class="cn">紫水晶色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#8E4585"><span style="color:#FFFFFF">#8E4585</span></div><div class="name">プラム</div><div class="cn">李子色</div></div></div>
+</div>
+</section>
+<section>
+<h2>ピンク</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#FFC0CB"><span style="color:#333333">#FFC0CB</span></div><div class="name">ピンク</div><div class="cn">粉色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FFD1DC"><span style="color:#333333">#FFD1DC</span></div><div class="name">ライトピンク</div><div class="cn">浅粉色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#F4C2C2"><span style="color:#333333">#F4C2C2</span></div><div class="name">ベビーピンク</div><div class="cn">婴儿粉</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E8C4B8"><span style="color:#333333">#E8C4B8</span></div><div class="name">ピンクベージュ</div><div class="cn">粉米色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FA8072"><span style="color:#FFFFFF">#FA8072</span></div><div class="name">サーモンピンク</div><div class="cn">鲑鱼粉</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FC0FC0"><span style="color:#FFFFFF">#FC0FC0</span></div><div class="name">ショッキングピンク</div><div class="cn">亮粉色（荧光粉）</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FF7F50"><span style="color:#FFFFFF">#FF7F50</span></div><div class="name">サンゴ</div><div class="cn">珊瑚色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C1547A"><span style="color:#FFFFFF">#C1547A</span></div><div class="name">ダークピンク</div><div class="cn">深粉色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#F7CAC9"><span style="color:#333333">#F7CAC9</span></div><div class="name">サクラ</div><div class="cn">樱花粉</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FFDAB9"><span style="color:#333333">#FFDAB9</span></div><div class="name">ピーチ</div><div class="cn">蜜桃色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FF69B4"><span style="color:#FFFFFF">#FF69B4</span></div><div class="name">ホットピンク</div><div class="cn">玫红色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#DE3163"><span style="color:#FFFFFF">#DE3163</span></div><div class="name">チェリーピンク</div><div class="cn">樱桃粉</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#D8A7A7"><span style="color:#333333">#D8A7A7</span></div><div class="name">くすみピンク</div><div class="cn">灰粉色</div></div></div>
+</div>
+</section>
+<section>
+<h2>レッド</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#FF0000"><span style="color:#FFFFFF">#FF0000</span></div><div class="name">レッド</div><div class="cn">红色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#8B0000"><span style="color:#FFFFFF">#8B0000</span></div><div class="name">ダークレッド</div><div class="cn">深红色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#722F37"><span style="color:#FFFFFF">#722F37</span></div><div class="name">ワインレッド</div><div class="cn">酒红色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#6D071A"><span style="color:#FFFFFF">#6D071A</span></div><div class="name">ボルドー</div><div class="cn">波尔多红</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#800020"><span style="color:#FFFFFF">#800020</span></div><div class="name">バーガンディー</div><div class="cn">勃艮第红</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#8C2B2B"><span style="color:#FFFFFF">#8C2B2B</span></div><div class="name">エンジ</div><div class="cn">胭脂红</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E75480"><span style="color:#FFFFFF">#E75480</span></div><div class="name">ローズ</div><div class="cn">玫瑰红</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E34234"><span style="color:#FFFFFF">#E34234</span></div><div class="name">朱色</div><div class="cn">朱红色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#C22047"><span style="color:#FFFFFF">#C22047</span></div><div class="name">紅色</div><div class="cn">绯红色</div></div></div>
+</div>
+</section>
+<section>
+<h2>オレンジ</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#FFA500"><span style="color:#333333">#FFA500</span></div><div class="name">オレンジ</div><div class="cn">橙色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FFD8A8"><span style="color:#333333">#FFD8A8</span></div><div class="name">ライトオレンジ</div><div class="cn">浅橙色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FBCEB1"><span style="color:#333333">#FBCEB1</span></div><div class="name">アプリコット</div><div class="cn">杏色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FFC324"><span style="color:#333333">#FFC324</span></div><div class="name">マンゴー</div><div class="cn">芒果色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E2711D"><span style="color:#FFFFFF">#E2711D</span></div><div class="name">カボチャ</div><div class="cn">南瓜色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E2725B"><span style="color:#FFFFFF">#E2725B</span></div><div class="name">テラコッタ</div><div class="cn">陶土色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#FF5F1F"><span style="color:#FFFFFF">#FF5F1F</span></div><div class="name">ネオンオレンジ</div><div class="cn">荧光橙</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#D2691E"><span style="color:#FFFFFF">#D2691E</span></div><div class="name">ダークオレンジ</div><div class="cn">深橙色</div></div></div>
+</div>
+</section>
+<section>
+<h2>メタリック</h2>
+<div class="grid">
+<div class="chip"><div><div class="sw" style="background:#C0C0C0"><span style="color:#333333">#C0C0C0</span></div><div class="name">シルバー</div><div class="cn">银色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#D4AF37"><span style="color:#333333">#D4AF37</span></div><div class="name">ゴールド</div><div class="cn">金色</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#B76E79"><span style="color:#FFFFFF">#B76E79</span></div><div class="name">ピンクゴールド</div><div class="cn">玫瑰金</div></div></div>
+<div class="chip"><div><div class="sw" style="background:#E6D2B5"><span style="color:#333333">#E6D2B5</span></div><div class="name">シャンペーンゴールド</div><div class="cn">香槟金</div></div></div>
+</div>
+</section>
+</div>
+</body>
+</html>
