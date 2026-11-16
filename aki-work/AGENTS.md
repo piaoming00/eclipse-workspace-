@@ -18,6 +18,7 @@ aki-work/
 │   ├── footer/             フッターパーツ（注: ファイル名は leftnav01.html のまま）
 │   │   └── leftnav01.html
 │   └── memo                API キー等のメモファイル（コミット・共有しない）
+├── company-site/           会社サイト（静的HTML/CSS/JS・ビルド不要）
 ├── items/                  商品ページ（月別）
 │   ├── 2026-11/
 │   └── 2026-12/
