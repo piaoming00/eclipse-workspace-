@@ -24,3 +24,11 @@ datetime,source,output,variant,note
 2026-11-11 20:10:47,img/top/IMG_1674.JPG,img/top/IMG_1674-wall-maxd.png,bg-replace,背景をくすみカラーグラデ+グレインに差し替え
 2026-11-11 20:11:07,img/top/IMG_1674.JPG,img/top/IMG_1674-4k-strong-wall.jpg,4k-wall-bg,漆喰壁スタイル背景で3840px幅に拡大
 2026-11-11 20:11:11,img/top/IMG_1676.JPG,img/top/IMG_1676-4k-strong-wall.jpg,4k-wall-bg,漆喰壁スタイル背景で3840px幅に拡大
+2026-11-16 09:52:55,img/top/IMG_1674-4k.jpg,img/top/IMG_1674-4k-shop.jpg,logo-replace,ロゴ Aki. → AKI楽天市場店（Bodoni72 Bold Italic + ヒラギノ明朝W6 / ゴールドドット維持）
+2026-11-16 09:52:55,img/top/IMG_1676-4k.jpg,img/top/IMG_1676-4k-shop.jpg,logo-replace,ロゴ Aki. → AKI楽天市場店（同上）
+2026-11-16 10:01:08,img/top/IMG_1674-4k-shop.jpg,img/top/IMG_1674-4k-shop.jpg,logo-replace-2line,元ロゴと同じ大きさに拡大（2行組み・右揃え／キャンバスサイズは不変）
+2026-11-16 10:01:08,img/top/IMG_1676-4k-shop.jpg,img/top/IMG_1676-4k-shop.jpg,logo-replace-2line,同上
+2026-11-16 10:19:04,img/top/IMG_1674-4k.jpg,img/top/IMG_1674-4k-shop-wall.jpg,wall-jagged,背景をキザキザ石積み壁(ボロノイ)に差し替え＋ロゴAKI楽天市場店 1206x402
+2026-11-16 10:19:04,img/top/IMG_1676-4k.jpg,img/top/IMG_1676-4k-shop-wall.jpg,wall-jagged,背景をキザキザ石積み壁(ボロノイ)に差し替え＋ロゴAKI楽天市場店 1206x302
+2026-11-16 10:39:26,img/top/IMG_1674-4k.jpg,img/top/IMG_1674-4k-shop-wall.jpg,wall-jagged,石を小ぶり(240x140)＋暖色寄せ(warmth1.8)に調整 1206x402
+2026-11-16 10:39:26,img/top/IMG_1676-4k.jpg,img/top/IMG_1676-4k-shop-wall.jpg,wall-jagged,石を小ぶり(240x140)＋暖色寄せ(warmth1.8)に調整 1206x302
